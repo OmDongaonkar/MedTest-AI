@@ -141,7 +141,6 @@ const Profile = () => {
                 <TabsList className="glass-input">
                   <TabsTrigger value="details">Details</TabsTrigger>
                   <TabsTrigger value="projects">Projects</TabsTrigger>
-                  <TabsTrigger value="activity">Activity</TabsTrigger>
                 </TabsList>
               </CardHeader>
 
@@ -230,35 +229,6 @@ const Profile = () => {
                 </CardContent>
               </TabsContent>
 
-              <TabsContent value="activity">
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-muted/20">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                      <div className="space-y-1">
-                        <p className="text-sm font-medium">Generated test cases for Patient Management System</p>
-                        <p className="text-xs text-muted-foreground">2 hours ago</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-muted/20">
-                      <div className="w-2 h-2 rounded-full bg-accent mt-2"></div>
-                      <div className="space-y-1">
-                        <p className="text-sm font-medium">Exported test cases to JIRA</p>
-                        <p className="text-xs text-muted-foreground">1 day ago</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-4 p-4 rounded-lg bg-muted/20">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                      <div className="space-y-1">
-                        <p className="text-sm font-medium">Updated profile information</p>
-                        <p className="text-xs text-muted-foreground">3 days ago</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </TabsContent>
             </Tabs>
           </Card>
         </div>

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Brain, Upload, FileOutput, User, Settings, LogIn } from "lucide-react";
+import { Brain, Upload, User, Settings, LogIn } from "lucide-react";
 
 const Navigation = () => {
   const location = useLocation();
@@ -34,16 +34,6 @@ const Navigation = () => {
               </Button>
             </Link>
             
-            <Link to="/output">
-              <Button 
-                variant={isActive("/output") ? "default" : "ghost"} 
-                size="sm"
-                className="flex items-center space-x-2"
-              >
-                <FileOutput className="h-4 w-4" />
-                <span>Output</span>
-              </Button>
-            </Link>
             
             <Link to="/profile">
               <Button 

@@ -14,6 +14,7 @@ import {
   Clock
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import TypingEffect from "@/components/TypingEffect";
 
 const Index = () => {
   const features = [
@@ -59,7 +60,10 @@ const Index = () => {
               AI-Powered Healthcare Testing
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-              Transform Requirements into
+              <TypingEffect 
+                text="Transform Requirements into" 
+                speed={80}
+              />
               <span className="block text-primary">Compliant Test Cases</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -68,18 +72,12 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center">
             <Link to="/upload">
               <Button size="lg" className="text-lg px-8 py-6 rounded-xl">
                 <Upload className="h-5 w-5 mr-2" />
                 Start Testing Now
                 <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
-            </Link>
-            <Link to="/output">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 rounded-xl glass-button">
-                <FileText className="h-5 w-5 mr-2" />
-                View Sample Output
               </Button>
             </Link>
           </div>
@@ -202,7 +200,7 @@ const Index = () => {
               </div>
               
               <Link to="/auth">
-                <Button size="lg" className="rounded-xl">
+                <Button size="lg" className="rounded-xl mt-8">
                   <Users className="h-5 w-5 mr-2" />
                   Get Started Today
                   <ArrowRight className="h-5 w-5 ml-2" />

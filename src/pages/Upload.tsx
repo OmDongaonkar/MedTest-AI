@@ -115,7 +115,33 @@ const Upload = () => {
                     Supports .txt, .md files
                   </p>
                 </div>
-                <Button variant="outline" size="sm" className="glass-button">
+                <input
+                  type="file"
+                  accept=".txt,.md"
+                  className="hidden"
+                  id="file-upload"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file) {
+                      const reader = new FileReader();
+                      reader.onload = (e) => {
+                        const content = e.target?.result as string;
+                        setRequirements(content);
+                        toast({
+                          title: "File uploaded successfully",
+                          description: `Loaded ${file.name}`,
+                        });
+                      };
+                      reader.readAsText(file);
+                    }
+                  }}
+                />
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="glass-button"
+                  onClick={() => document.getElementById('file-upload')?.click()}
+                >
                   Choose File
                 </Button>
               </div>
